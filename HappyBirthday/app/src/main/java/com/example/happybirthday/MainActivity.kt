@@ -43,28 +43,26 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
-    Column (
+    Column(
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
-            .fillMaxSize()
-            .padding(8.dp)
     ) {
         Text(
             text = message,
-            fontSize = 75.sp,
-            lineHeight = 75.sp,
+            fontSize = 100.sp,
+            lineHeight = 116.sp,
             textAlign = TextAlign.Center
         )
         Text(
             text = from,
-            fontSize = 25.sp,
+            fontSize = 36.sp,
             modifier = Modifier
                 .padding(16.dp)
-                .align(alignment = Alignment.End)
+                .align(alignment = Alignment.CenterHorizontally)
         )
     }
 }
+
 
 @Composable
 fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
