@@ -29,7 +29,9 @@ class MainActivity : ComponentActivity() {
                 GreetingText(
                     message = "Happy Birthday Sam!",
                     from = "From Dean",
-                    modifier = Modifier.padding(8.dp))
+                    modifier = Modifier.padding(8.dp)
+                        .fillMaxSize()
+                )
             }
         }
     }
@@ -39,6 +41,7 @@ class MainActivity : ComponentActivity() {
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column (
         verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier.padding(8.dp)
     ) {
         Text(
