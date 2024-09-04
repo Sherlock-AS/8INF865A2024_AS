@@ -26,12 +26,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             HappyBirthdayTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    GreetingText(
-                        message = "Happy Birthday Sam!",
-                        from = "From Dean",
-                        modifier = Modifier.padding(innerPadding))
-                }
+                GreetingText(
+                    message = "Happy Birthday Sam!",
+                    from = "From Dean",
+                    modifier = Modifier.padding(8.dp))
             }
         }
     }
