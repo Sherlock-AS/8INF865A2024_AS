@@ -45,6 +45,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.ui.text.input.KeyboardType
+
 
 
 class MainActivity : ComponentActivity() {
@@ -69,7 +72,10 @@ fun EditNumberField(modifier: Modifier = Modifier){
     TextField(
         value = amountInput,
         onValueChange = {amountInput = it},
-        modifier = modifier
+        modifier = modifier,
+        label = {Text(stringResource(R.string.bill_amount))},
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
     )
 }
 
